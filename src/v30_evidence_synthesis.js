@@ -35,6 +35,20 @@ const coverage=report=>Array.isArray(report?.evidence?.results)?report.evidence.
 function render(report,s,records,error){
  const matches=coverage(report),count=records.length,annotated=records.filter(r=>r.outcome_class&&r.outcome_class!=='NOT_REPORTED'&&r.outcome_class!=='UNKNOWN').length;
  const rates=records.reduce((n,r)=>n+(r.measurements||[]).filter(m=>m.spread_rate_mm_s!==null&&Number.isFinite(+m.spread_rate_mm_s)).length,0);
+
+ const observedRates=records.flatMap(r=>(r.measurements||[]).map(m=>m.spread_rate_mm_s).filter(v=>v!==null&&v!==undefined&&Number.isFinite(+v)).map(Number));
+ const classTotals={};
+ for(const r of records){
+   const k=r.outcome_class;
+   if(k&&k!=='NOT_REPORTED'&&k!=='UNKNOWN')classTotals[k]=(classTotals[k]||0)+1;
+ }
+ const labels={QUENCHED:'quenched',NO_IGNITION:'no ignition',BLOWOFF:'blowoff',NO_BLOWOFF:'no blowoff',IGNITION_OBSERVED:'ignition observed',ONE_SIDED_FLAME:'one-sided flame'};
+ const grouped=Object.entries(classTotals).sort((a,b)=>b[1]-a[1]);
+ const examples=grouped.slice(0,4).map(([k,n])=>n+' '+(labels[k]||k.toLowerCase().replaceAll('_',' '))).join(', ');
+ const additional=grouped.slice(4).reduce((n,x)=>n+x[1],0);
+ const outcomes=annotated?'NASA report-derived outcome annotations include '+examples+(additional?' and '+additional+' in other categories':'')+'.':'No overall outcome categories are classified for these tests in EMBER’s present catalog.';
+ const spreadRange=observedRates.length?' Reported spread-rate measurements range from '+fmt(Math.min(...observedRates),3)+' to '+fmt(Math.max(...observedRates),3)+' mm/s across different documented test conditions.':'';
+
  const alerts=records.filter(r=>r.oxygen_warning).length,notClassified=count-annotated;
  const material=s.material||'selected material',g=gravity(s.gravity_g);
  const o2=fmt(+s.oxygen_fraction*100,1),flow=fmt(+s.forced_flow_m_s*100,1),press=fmt(s.pressure_kpa,1);
@@ -60,8 +74,8 @@ function render(report,s,records,error){
    finding(3,'No unsupported inference about ignition, flame spread or extinguishment is made.');
    return;
  }
- summary.textContent='For '+material+', the indexed NASA BASS-II subset contains '+count+' experiment record(s) from ISS microgravity and '+rates+' reported video-tracked flame-spread-rate measurement(s). '+annotated+' record(s) have a source-based outcome classification; '+notClassified+' lack a classified outcome in this dataset. Separately, EMBER retrieved '+matches.length+' curated literature-condition match(es). This evidence cannot establish flame behavior for the selected '+g+' chamber conditions.'+top;
- finding(0,count+' NASA experiment(s); '+rates+' measured spread-rate value(s); '+annotated+' outcome annotation(s). These values are not simulated predictions.');
+ summary.textContent='For '+material+', NASA BASS-II indexed '+count+' ISS microgravity test record(s) and '+rates+' reported video-tracked spread-rate measurement(s).'+spreadRange+' '+outcomes+' '+notClassified+' record(s) have no classified overall outcome in this subset. EMBER separately retrieved '+matches.length+' literature-condition match(es). None of these findings establishes flame behavior for your selected '+g+' chamber.'+top;
+ finding(0,count+' NASA experiment(s) and '+rates+' measured spread-rate value(s). '+outcomes+' These observations describe their original test conditions, not a simulation.');
  finding(1,'NASA BASS-II reports ISS microgravity rather than the selected '+g+'. Your pressure '+press+' kPa, oxygen '+o2+'%, and flow '+flow+' cm/s must not be assumed experimentally matched.');
  finding(2,notClassified+' record(s) lack classified outcomes. Per-test measured pressure and gravity are unavailable here.'+(alerts?' '+alerts+' oxygen-data warning(s) require careful source review.':''));
  finding(3,'The original specimen geometry and test protocol matter. Gower proximity cannot validate combustion chemistry, flame equivalence or spacecraft fire safety.');
