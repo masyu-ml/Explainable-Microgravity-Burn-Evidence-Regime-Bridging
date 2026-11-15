@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="170" viewBox="0 0 460 170" role="img" aria-label="USER MANUAL: Open the PDF walkthrough">
+<rect x="1" y="1" width="458" height="168" rx="16" fill="#0B1424" stroke="#273B51" stroke-width="2"/>
+<rect x="1" y="1" width="6" height="168" rx="3" fill="#85E3D7"/>
+<path d="M26 40 H113 M350 40 H434" stroke="#28485E" stroke-width="1"/>
+<text x="28" y="28" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#85E3D7">03  /  USER DOCUMENTATION</text>
+<text x="27" y="93" font-family="Arial,sans-serif" font-size="29" font-weight="800" letter-spacing="1.7" fill="#F5FBFF">USER MANUAL</text>
+<text x="28" y="130" font-family="Arial,sans-serif" font-size="16" fill="#AFC6D4">Open the PDF walkthrough</text>
+<circle cx="406" cy="91" r="25" fill="#10293B" stroke="#85E3D7" stroke-width="2"/>
+<text x="406" y="101" font-family="Arial,sans-serif" font-size="29" text-anchor="middle" font-weight="600" fill="#85E3D7">↗</text>
+<path d="M28 150 H432" stroke="#233C50" stroke-width="1"/>
+</svg>
