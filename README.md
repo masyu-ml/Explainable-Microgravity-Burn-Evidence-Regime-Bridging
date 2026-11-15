@@ -30,7 +30,7 @@
 
 <div align="center">
 
-**[Architecture](docs/architecture.md)** · **[Mathematical models](docs/algorithms.md)** · **[NASA data provenance](docs/data-provenance.md)** · **[Interactive scientific explainer](docs/index.html)**
+**[Architecture](docs/architecture.md)** · **[Mathematical models](docs/algorithms.md)** · **[NASA data provenance](docs/data-provenance.md)** · **[Explainer HTML source](docs/index.html)**
 
 </div>
 
@@ -82,7 +82,7 @@ flowchart LR
 | 🛰️ [System architecture](docs/architecture.md) | Layered system layout and analysis request lifecycle |
 | 📐 [Mathematical methodology](docs/algorithms.md) | Gower / kNN-style retrieval, Bayesian inference, physical fingerprinting and inverse matching |
 | 🔬 [NASA BASS-II data provenance](docs/data-provenance.md) | Official source entry points, record reconciliation and measured-versus-derived distinctions |
-| 🧭 [Interactive explainer](docs/index.html) | Interactive educational demonstration of the retrieval approach |
+| 🧭 [Interactive explainer source](docs/index.html) | HTML/JavaScript walkthrough; open the file in a browser to interact |
 | 🧾 [Source archive disclosure](docs/source-snapshots.md) | What source is archived here and what is not identical to production |
 | 🧪 [Standalone Gower example](examples/gower_demo.py) | Independently runnable example using synthetic, not NASA, records |
 | ✅ [Regression tests](tests/test_gower_demo.py) | Example-level numerical and edge-case checks |
