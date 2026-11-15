@@ -4,7 +4,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Audiowide&size=68&duration=2400&pause=1400&color=00E5FF&center=true&vCenter=true&repeat=true&width=900&height=130&lines=EMBER" alt="Animated EMBER aerospace-style wordmark" />
 </a>
 
-### EXPLAINABLE MICROGRAVITY BURN EVIDENCE & REGIME BRIDGING
+### EXPLAINABLE MICROGRAVITY BURN EVIDENCE & REGIME-BRIDGING
 
 **NASA Space Apps Challenge 2026** · **Flame in Freefall** · **One Man Orbit**
 
