@@ -6,11 +6,18 @@
 [![Scientific methods](https://img.shields.io/badge/methods-explainable%20and%20bounded-147d73)](docs/algorithms.md)
 [![Status](https://img.shields.io/badge/status-research%20prototype-b97720)](docs/source-snapshots.md)
 
-**[Launch the live EMBER platform](https://ember-mvp-one-man-orbit.vercel.app/)** · **[Architecture](docs/architecture.md)** · **[Mathematical methods](docs/algorithms.md)** · **[Interactive explainer](docs/index.html)**
+**[Launch the live EMBER platform](https://ember-mvp-one-man-orbit.vercel.app/)** · **[Watch the video demo](https://www.youtube.com/watch?v=ClBB6BDd4AQ)** · **[User manual (PDF)](https://drive.google.com/file/d/1LP464j96IjfntalNycTRG_JweqMJsy6k/view?usp=drive_link)** · **[Architecture](docs/architecture.md)** · **[Mathematical methods](docs/algorithms.md)** · **[Interactive explainer](docs/index.html)**
 
 EMBER connects source-linked NASA microgravity combustion experiments to bounded, material-specific physics calculations and explicit scientific abstention. Experimental evidence, computational fingerprints, and protocol-specific statistical estimates are reported separately rather than presented as interchangeable forms of proof.
 
 > **Scope and source-status disclosure:** The latest Vercel production source is **not fully mirrored** in this repository. The original complete **GitHub-ready archival package** was prepared separately; the material published here includes verified project documentation, original-method extracts, an independent educational demonstration and source snapshot guidance. See [Source provenance](docs/source-snapshots.md). GitHub publishing has not modified the Vercel application.
+
+## Project demo and user manual
+
+[![Watch the EMBER demonstration on YouTube](https://img.youtube.com/vi/ClBB6BDd4AQ/hqdefault.jpg)](https://www.youtube.com/watch?v=ClBB6BDd4AQ)
+
+- **[Watch the EMBER video demonstration on YouTube](https://www.youtube.com/watch?v=ClBB6BDd4AQ)** — hosted on YouTube and linked here for easy access.
+- **[Read the EMBER user manual (Google Drive PDF)](https://drive.google.com/file/d/1LP464j96IjfntalNycTRG_JweqMJsy6k/view?usp=drive_link)** — instructions and walkthrough for using the live application.
 
 ## Scientific modules
 
