@@ -43,3 +43,18 @@ python -m pytest -q test_evidence.py
 These are **historical recovered sources**. The current Vercel application has more recent scientific, UI, voice and source-adjudication layers (V12–V29), which are **not reconstructed or falsely represented as present** in the recovered package.
 
 The deployed website at https://ember-mvp-one-man-orbit.vercel.app/ remains unchanged by this repository publication. Physical experiments, real measurement verification and independent safety certification are separate from these software test results.
+
+
+## Source imported during this request
+
+A portion of the recovered source has now been committed under `research_core/` and `src/`:
+
+- Historical FastAPI entry point, schemas, API endpoints and model router.
+- Weighted Gower retrieval and evidence catalog query logic.
+- Normalization, provenance, model store and inverse-design utility modules.
+- Several historical material adapters (Kimwipes, NCA-PMMA and LDPE wire).
+- Selected recoverable newer deployment support files (requirements, Vercel route configuration, base module and V29 JavaScript layout repair).
+
+**This is not yet an exhaustive source import.** The archived package contains 68 items; large research-core model services, some physics adapters, model-data files, evidence pipeline and legacy console remain in the archive awaiting transfer. The newer production V29 deployment also contains additional modules not included in the historical archive.
+
+The complete 68-item source archive was prepared separately. Do not consider this GitHub tree to be a byte-for-byte deployment mirror.
